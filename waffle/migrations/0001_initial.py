@@ -34,6 +34,7 @@ class Migration(migrations.Migration):
                 ('users', models.ManyToManyField(help_text='Activate this flag for these users.', to=settings.AUTH_USER_MODEL, blank=True)),
             ],
             options={
+                'swappable': 'WAFFLE_FLAG_MODEL',
             },
             bases=(models.Model,),
         ),
